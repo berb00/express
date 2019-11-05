@@ -20,16 +20,16 @@
         var username = $("#account").val();
         var password = $("#password").val();
         $.ajax({
-          type:"post",
+          type:"get",
           url:"http://localhost:3000/login",
           data:{
             username:username,
             password:password
           },
           timeout:5000,
-          success:function(data){
-            data = JSON.parse(data);
-            if(data.code === 1){
+          success:function(item){
+            item = JSON.parse(item);
+            if(item.code === 1){
               alert("登陆成功")
             }else{
               alert("用户名密码错误")
