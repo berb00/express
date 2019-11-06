@@ -22,8 +22,8 @@ router.post('/post', function(req, res, next) { //查不到该路由
 });
 
 router.get('/', function(req, res, next) {
-  console.log(req);
-  console.log(res);
+  console.log(req.query);
+  // console.log(res);
   res.send('login by /');
 });
 
