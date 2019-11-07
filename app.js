@@ -1,3 +1,4 @@
+const fs = require('fs');
 var createError = require('http-errors');
 var bodyParser = require('body-parser');
 var express = require('express');
@@ -8,6 +9,13 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
+
+var testfs = require('./public/javascripts/module/fs');
+console.log('========================================', fs)
+fs.rename('./public/images/upgrade.png', './public/images/upgrade1.png', () => {
+  console.log('rename done!');
+})
+// testfs.showfs();
 
 var app = express();
 
