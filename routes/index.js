@@ -14,6 +14,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/header', function(req, res, next) {
+    res.render('./components/header', { title: 'Express' });
+});
+
 router.get('/md5', function(req, res, next) {
   var q = req.query.q || 'berb00';
   var md5Value = utility.md5(q);

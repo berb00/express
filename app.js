@@ -11,7 +11,7 @@ var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 
 var testfs = require('./public/javascripts/module/fs');
-console.log('========================================', fs)
+// console.log('========================================', fs)
 fs.rename('./public/images/upgrade.png', './public/images/upgrade1.png', () => {
   console.log('rename done!');
 })
