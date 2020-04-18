@@ -276,7 +276,12 @@ module.exports = {
     externals: {
         'AMap': 'AMap'
     },
-      
+    node: {     
+        fs: 'empty',
+        net:'empty',
+        tls:"empty",
+    },
+    target: 'node'
 
 
 };
