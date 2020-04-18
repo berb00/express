@@ -1,7 +1,7 @@
-const fs = require('fs');
+// const fs = require('fs');
 
 function showfs () {
-    return fs;
+    return 'aa';
 }
 
 exports = {

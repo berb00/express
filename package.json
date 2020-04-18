@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "build": "node build/build.js",
+    "lint": "eslint --fix config lib middlewares models routes test"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
@@ -19,7 +21,25 @@
     "utility": "^1.16.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "babel-loader": "^8.1.0",
     "body-parser": "^1.19.0",
-    "nodemon": "^1.19.4"
+    "chalk": "^4.0.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "eslint-friendly-formatter": "^4.0.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^4.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "nodemon": "^1.19.4",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "ora": "^4.0.3",
+    "rimraf": "^3.0.2",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-merge": "^4.2.2",
+    "workbox-webpack-plugin": "^5.1.2"
   }
 }

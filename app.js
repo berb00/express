@@ -1,4 +1,4 @@
-const fs = require('fs');
+var fs = require('fs');
 var createError = require('http-errors');
 var bodyParser = require('body-parser');
 var express = require('express');
@@ -9,11 +9,11 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
 
-var testfs = require('./public/javascripts/module/fs');
+// var testfs = require('./public/javascripts/module/fs');
 
-fs.rename('./public/images/upgrade.png', './public/images/upgrade1.png', () => {
-  console.log('rename done!');
-})
+// fs.rename('./public/images/upgrade.png', './public/images/upgrade1.png', () => {
+//   console.log('rename done!');
+// })
 
 var app = express();
 
@@ -44,7 +44,7 @@ app.use('/login', loginRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
 //   next(createError(404));
-    let err = new Error('sorry! can`t found this page');
+    var err = new Error('sorry! can`t found this page');
     err.status = 404;
     next(err);
 });
