@@ -209,10 +209,10 @@ module.exports = {
 		// 多页应用new多次(需chunks属性)
 		new HtmlWebpackPlugin({ // 打包输出html
 			title: 'Progressive Web Application',
-			template: path.join(__dirname, '../public/index.html'),
+			template: path.join(__dirname, '../index.html'),
 			filename: 'index.html',
 			// chunks: ['index'], // 多页应用区分代码块
-			hash: true,
+			// hash: true,
 			minify: {
 				removeAttributeQuotes: true, // 删除模版中的双引号
 				removeComments: true, // 删除空白符与换行符
